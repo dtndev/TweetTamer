@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetTamer", "TweetTamer\TweetTamer.csproj", "{FDB886FA-2C0A-4C91-8519-EB0791AC9298}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TweetTamer.Tests", "TweetTamer.Tests\TweetTamer.Tests.csproj", "{DE69C444-ECC3-4591-A3D5-ACA72D80DAE1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtnTwitterClient", "DtnTwitterClient\DtnTwitterClient.csproj", "{9E75F34B-F196-4251-99C3-F4F387DB27D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtnTwitterClient.Tests", "DtnTwitterClient.Tests\DtnTwitterClient.Tests.csproj", "{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{FDB886FA-2C0A-4C91-8519-EB0791AC9298}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDB886FA-2C0A-4C91-8519-EB0791AC9298}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDB886FA-2C0A-4C91-8519-EB0791AC9298}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE69C444-ECC3-4591-A3D5-ACA72D80DAE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE69C444-ECC3-4591-A3D5-ACA72D80DAE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE69C444-ECC3-4591-A3D5-ACA72D80DAE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE69C444-ECC3-4591-A3D5-ACA72D80DAE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E75F34B-F196-4251-99C3-F4F387DB27D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E75F34B-F196-4251-99C3-F4F387DB27D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E75F34B-F196-4251-99C3-F4F387DB27D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E75F34B-F196-4251-99C3-F4F387DB27D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
