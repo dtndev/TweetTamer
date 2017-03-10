@@ -5,21 +5,55 @@
 //-----------------------------------------------------------------------
 namespace DtnTwitterClient
 {
-    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Threading.Tasks;
 
-    /// <summary>
-    /// Coordinates all interactions with the Twitter platform.
-    /// </summary>
     public class TwitterClient
     {
-        /// <summary>
-        /// Request all tweets matching the supplied request
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns>All tweets matching the supplied request, or empty if there are no matches.</returns>
-        public IEnumerable<Tweet> RequestTweets(UserTimelineRequest request)
+        private readonly HttpClient httpClient;
+        private readonly ApplicationCredentials credentials;
+
+        private BearerToken bearerToken;
+
+        public TwitterClient(ApplicationCredentials credentials)
+            : this(CreateHttpClient(),  credentials)
         {
-            return new List<Tweet>();
+        }
+
+        internal TwitterClient(HttpClient httpClient, ApplicationCredentials credentials)
+        {
+            this.httpClient = httpClient;
+            this.credentials = credentials;
+        }
+
+        public async Task<TResult> SendAsync<TResult>(TwitterRequest<TResult> request)
+        {
+            HttpRequestMessage httpRequest = await request.CreateHttpRequest(this);
+            HttpResponseMessage httpResponse = await this.httpClient.SendAsync(httpRequest);
+            return await request.ProcessResponse(httpResponse);
+        }
+
+        internal async Task<BearerToken> CurrentBearerToken()
+        {
+            if (this.bearerToken == null)
+            {
+                this.bearerToken = await this.GetNewBearerToken();
+            }
+
+            return this.bearerToken;
+        }
+
+        private static HttpClient CreateHttpClient()
+        {
+            HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Clear();
+            return client;
+        }
+
+        private async Task<BearerToken> GetNewBearerToken()
+        {
+            var tokenRequest = new BearerTokenRequest(this.credentials, this.httpClient);
+            return await tokenRequest.SendAsync();
         }
     }
 }

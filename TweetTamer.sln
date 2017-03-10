@@ -11,6 +11,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtnTwitterClient", "DtnTwit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtnTwitterClient.Tests", "DtnTwitterClient.Tests\DtnTwitterClient.Tests.csproj", "{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DtnTwitterClient.TestConsole", "DtnTwitterClient.TestConsole\DtnTwitterClient.TestConsole.csproj", "{37E1B162-D072-4AEA-B94D-A8035FC12CCA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TwitterClient", "TwitterClient", "{EB4D9570-751E-43AB-A05E-389D419DCCF1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5EFAAD80-1EAA-4DC4-B279-78B68FD19CDE}"
+	ProjectSection(SolutionItems) = preProject
+		Common.Build.Props = Common.Build.Props
+		Common.Build.targets = Common.Build.targets
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +44,17 @@ Global
 		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37E1B162-D072-4AEA-B94D-A8035FC12CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37E1B162-D072-4AEA-B94D-A8035FC12CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37E1B162-D072-4AEA-B94D-A8035FC12CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37E1B162-D072-4AEA-B94D-A8035FC12CCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9E75F34B-F196-4251-99C3-F4F387DB27D6} = {EB4D9570-751E-43AB-A05E-389D419DCCF1}
+		{81F5AFBD-FA12-43CA-AD2F-022A61F4316A} = {EB4D9570-751E-43AB-A05E-389D419DCCF1}
+		{37E1B162-D072-4AEA-B94D-A8035FC12CCA} = {EB4D9570-751E-43AB-A05E-389D419DCCF1}
 	EndGlobalSection
 EndGlobal
